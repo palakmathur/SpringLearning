@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-init-method="myInit" default-destroy-method="cleanUp">
+
+
+
+
+    <bean id="triangle" class="in.palakmathur.aqualogic.Triangle"
+          autowire="byName">
+
+    </bean>
+
+
+
+
+
+    <bean id="pointA" class="in.palakmathur.aqualogic.Point">
+        <property name="x" value="0" />
+        <property name="y" value="0" />
+    </bean>
+
+
+
+    <bean id="pointB" class="in.palakmathur.aqualogic.Point">
+        <property name="x" value="-20" />
+        <property name="y" value="0" />
+    </bean>
+
+    <bean id="pointC" class="in.palakmathur.aqualogic.Point">
+        <property name="x" value="0" />
+        <property name="y" value="20" />
+    </bean>
+
+</beans>
+
+
+        <!--  <bean id="triangle" class="in.palakmathur.aqualogic.Triangle"
+                     autowire="byName"  name="triangle2"> -->
+        <!-- triangle2 is an alias -->
+        <!-- <constructor-arg value='Equilateral' type='java.lang.String'/>
+            <constructor-arg value='10' type='int'/>
+             <constructor-arg value='Equilateral' index='0' />
+            <constructor-arg value='10' index='1'/>
+
+
+
+        -->
+        <!-- <property name="pointA" ref="origin" /> -->
+        <!--   <property name="pointA">
+                   <idref bean="origin" />
+            </property> -->
+        <!--   <property name="pointB">
+                  <bean class="in.palakmathur.aqualogic.Point">
+                         <property name="x" value="-20" />
+                         <property name="y" value="0" />
+                  </bean>
+           </property> -->
+        <!--  <property name="pointC" >
+                 <bean class="in.palakmathur.aqualogic.Point">
+                        <property name="x" value="0" />
+                        <property name="y" value="20" />
+                 </bean>
+          </property> -->
+        <!--   <property name="pointB" ref="pointB" />
+           <property name="pointC" ref="pointC" /> -->
+        <!--    <property name="pointList">
+                   <list>
+                          <ref bean="origin" />
+                          <ref bean="pointB" />
+                          <ref bean="pointC" />
+                   </list>
+
+            </property> -->
+
+        <!-- </bean> -->
+
+        <!-- <bean id="point" class="in.palakmathur.aqualogic.Point" autowire="byType"/> --> <!-- This works only when there is one point bean defined -->
