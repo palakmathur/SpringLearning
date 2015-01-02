@@ -23,7 +23,7 @@
         <property name="y" value="0" />
     </bean>
 
-    <bean id="pointC" class="in.palakmathur.aqualogic.impl.Point">
+    <bean id="center" class="in.palakmathur.aqualogic.impl.Point">
         <property name="x" value="0" />
         <property name="y" value="20" />
     </bean>
