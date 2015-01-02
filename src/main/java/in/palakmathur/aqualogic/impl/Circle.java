@@ -1,14 +1,13 @@
 package in.palakmathur.aqualogic.impl;
 
 import in.palakmathur.aqualogic.Shape;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
+@Component
 public class Circle implements Shape {
 
     private Point center;

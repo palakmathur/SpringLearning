@@ -14,6 +14,7 @@ public class DrawingApp {
                 ClassPathXmlApplicationContext("spring-config.xml"); //for this to work spring-config should be in the Classpath and src/main/resources folder is the one
         applicationContext.registerShutdownHook();
 
+
         Shape shape;
         shape = (Shape) applicationContext.getBean("circle");
         shape.draw();

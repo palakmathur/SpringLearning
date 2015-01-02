@@ -29,8 +29,7 @@
     </bean>
 
 
-    <bean id="circle" class="in.palakmathur.aqualogic.impl.Circle">
-    </bean>
+   <context:component-scan base-package="in.palakmathur.aqualogic" />
 
     <context:annotation-config />
 
