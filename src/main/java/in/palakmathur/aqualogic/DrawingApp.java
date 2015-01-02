@@ -10,14 +10,15 @@ import org.springframework.core.io.FileSystemResource;
 
 public class DrawingApp {
 
-    public static void main(String []args) {
+    public static void main(String[] args) {
         //Triangle triangle = new Triangle();
         //BeanFactory factory =
         // new XmlBeanFactory(new FileSystemResource("src/main/resources/spring-config.xml"));
 
-        AbstractApplicationContext applicationContext = new
+        //AbstractApplicationContext applicationContext = new
+        ApplicationContext applicationContext = new
                 ClassPathXmlApplicationContext("spring-config.xml"); //for this to work spring-config should be in the Classpath and src/main/resources folder is the one
-        applicationContext.registerShutdownHook();
+        // applicationContext.registerShutdownHook();
         Triangle triangle = (Triangle) applicationContext.getBean
                 ("triangle");
 
