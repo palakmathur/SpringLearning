@@ -5,33 +5,41 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-  <!--  <bean id="triangle" class="in.palakmathur.aqualogic.impl.Triangle">
-        <property name="pointA" ref="pointA" />
-        <property name="pointB" ref="pointB" />
-        <property name="pointC" ref="pointC" />
+    <!--  <bean id="triangle" class="in.palakmathur.aqualogic.impl.Triangle">
+          <property name="pointA" ref="pointA" />
+          <property name="pointB" ref="pointB" />
+          <property name="pointC" ref="pointC" />
 
-    </bean>-->
+      </bean>-->
 
     <bean id="pointA" class="in.palakmathur.aqualogic.impl.Point">
-        <qualifier value="circleRelated" />
-        <property name="x" value="0" />
-        <property name="y" value="0" />
+        <qualifier value="circleRelated"/>
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
     </bean>
 
     <bean id="pointB" class="in.palakmathur.aqualogic.impl.Point">
-        <property name="x" value="-20" />
-        <property name="y" value="0" />
+        <property name="x" value="-20"/>
+        <property name="y" value="0"/>
     </bean>
 
     <bean id="center" class="in.palakmathur.aqualogic.impl.Point">
-        <property name="x" value="0" />
-        <property name="y" value="20" />
+        <property name="x" value="0"/>
+        <property name="y" value="20"/>
     </bean>
 
+    <bean id="messageSource"
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>myMessages</value>
+            </list>
+        </property>
+    </bean>
 
-   <context:component-scan base-package="in.palakmathur.aqualogic" />
+    <context:component-scan base-package="in.palakmathur.aqualogic"/>
 
-    <context:annotation-config />
+    <context:annotation-config/>
 
 </beans>
 
