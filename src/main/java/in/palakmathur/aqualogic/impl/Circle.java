@@ -1,10 +1,7 @@
 package in.palakmathur.aqualogic.impl;
 
 import in.palakmathur.aqualogic.Shape;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
