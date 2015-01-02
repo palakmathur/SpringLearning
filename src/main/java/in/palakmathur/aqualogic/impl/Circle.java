@@ -2,12 +2,13 @@ package in.palakmathur.aqualogic.impl;
 
 import in.palakmathur.aqualogic.Shape;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
-@Component
+@Service
 public class Circle implements Shape {
 
     private Point center;
