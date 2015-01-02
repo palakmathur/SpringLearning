@@ -1,8 +1,7 @@
-package in.palakmathur.aqualogic;
+package in.palakmathur.aqualogic.impl;
 
 
-import in.palakmathur.aqualogic.impl.HelloWorldMessage;
-
+import in.palakmathur.aqualogic.MessageService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation. AnnotationConfigApplicationContext;

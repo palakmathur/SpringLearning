@@ -1,15 +1,16 @@
-package in.palakmathur.aqualogic;
+package in.palakmathur.aqualogic.impl;
 
 
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
+import in.palakmathur.aqualogic.Shape;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.FileSystemResource;
 
 public class DrawingApp {
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         //Triangle triangle = new Triangle();
         //BeanFactory factory =
@@ -19,10 +20,10 @@ public class DrawingApp {
         ApplicationContext applicationContext = new
                 ClassPathXmlApplicationContext("spring-config.xml"); //for this to work spring-config should be in the Classpath and src/main/resources folder is the one
         // applicationContext.registerShutdownHook();
-        Triangle triangle = (Triangle) applicationContext.getBean
-                ("triangle");
 
-        triangle.draw();
+        Shape shape;
+        shape = (Shape) applicationContext.getBean("circle");
+        shape.draw();
     }
 
 }

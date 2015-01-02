@@ -1,10 +1,12 @@
-package in.palakmathur.aqualogic;
+package in.palakmathur.aqualogic.impl;
 
+import in.palakmathur.aqualogic.Shape;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 
-public class Triangle implements InitializingBean, DisposableBean {
+public class Triangle implements Shape {
+        //InitializingBean, DisposableBean {
 //implements
 // ApplicationContextAware,
 // BeanNameAware{
@@ -50,7 +52,7 @@ public class Triangle implements InitializingBean, DisposableBean {
     }
 
 
-    public void myInit(){
+/*    public void myInit(){
         System.out.println("MyInit called for triangle");
     }
 
@@ -68,7 +70,7 @@ public class Triangle implements InitializingBean, DisposableBean {
     public void destroy() throws Exception {
         System.out.println("Destroying");
 
-    }
+    }*/
    /* @Override
     public void setApplicationContext(ApplicationContext applicationContext)
             throws BeansException {

@@ -1,4 +1,4 @@
-package in.palakmathur.aqualogic;
+package in.palakmathur.aqualogic.impl;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

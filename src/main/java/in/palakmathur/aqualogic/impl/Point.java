@@ -1,4 +1,4 @@
-package in.palakmathur.aqualogic;
+package in.palakmathur.aqualogic.impl;
 
 
 public class Point {

@@ -1,49 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-
-
-
-    <bean id="triangle" class="in.palakmathur.aqualogic.Triangle"
-          autowire="byName">
+  <!--  <bean id="triangle" class="in.palakmathur.aqualogic.impl.Triangle">
         <property name="pointA" ref="pointA" />
         <property name="pointB" ref="pointB" />
         <property name="pointC" ref="pointC" />
 
+    </bean>-->
+
+    <bean id="pointA" class="in.palakmathur.aqualogic.impl.Point">
+        <qualifier value="circleRelated" />
+        <property name="x" value="0" />
+        <property name="y" value="0" />
     </bean>
 
-    <bean id="pointA" class="in.palakmathur.aqualogic.Point">
-        <property name="x" value="${pointA.pointX}" />
-        <property name="y" value="${pointA.pointY}" />
-    </bean>
-
-
-
-    <bean id="pointB" class="in.palakmathur.aqualogic.Point">
+    <bean id="pointB" class="in.palakmathur.aqualogic.impl.Point">
         <property name="x" value="-20" />
         <property name="y" value="0" />
     </bean>
 
-    <bean id="pointC" class="in.palakmathur.aqualogic.Point">
+    <bean id="pointC" class="in.palakmathur.aqualogic.impl.Point">
         <property name="x" value="0" />
         <property name="y" value="20" />
     </bean>
 
-  <!--  <bean class="in.palakmathur.aqualogic.DisplayNameBeanPostProcessor" /> -->
-  <!--  <bean class="in.palakmathur.aqualogic.MyBeanFactoryPostProcessor" /> -->
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="pointsConfig.properties" />
+
+    <bean id="circle" class="in.palakmathur.aqualogic.impl.Circle">
     </bean>
 
-
-
+    <context:annotation-config />
 
 </beans>
 
+        <!--  <bean class="in.palakmathur.aqualogic.impl.DisplayNameBeanPostProcessor" /> -->
+        <!--  <bean class="in.palakmathur.aqualogic.impl.MyBeanFactoryPostProcessor" /> -->
+        <!--   <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="location" value="pointsConfig.properties" />
+        </bean>-->
 
-        <!--  <bean id="triangle" class="in.palakmathur.aqualogic.Triangle"
+        <!--  <bean id="triangle" class="in.palakmathur.aqualogic.impl.Triangle"
                      autowire="byName"  name="triangle2"> -->
         <!-- triangle2 is an alias -->
         <!-- <constructor-arg value='Equilateral' type='java.lang.String'/>
@@ -59,13 +58,13 @@
                    <idref bean="origin" />
             </property> -->
         <!--   <property name="pointB">
-                  <bean class="in.palakmathur.aqualogic.Point">
+                  <bean class="in.palakmathur.aqualogic.impl.Point">
                          <property name="x" value="-20" />
                          <property name="y" value="0" />
                   </bean>
            </property> -->
         <!--  <property name="pointC" >
-                 <bean class="in.palakmathur.aqualogic.Point">
+                 <bean class="in.palakmathur.aqualogic.impl.Point">
                         <property name="x" value="0" />
                         <property name="y" value="20" />
                  </bean>
@@ -83,4 +82,4 @@
 
         <!-- </bean> -->
 
-        <!-- <bean id="point" class="in.palakmathur.aqualogic.Point" autowire="byType"/> --> <!-- This works only when there is one point bean defined -->
+        <!-- <bean id="point" class="in.palakmathur.aqualogic.impl.Point" autowire="byType"/> --> <!-- This works only when there is one point bean defined -->
